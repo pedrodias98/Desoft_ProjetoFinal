@@ -14,7 +14,7 @@ pygame.display.set_caption('SCAPE INSPER')
 imag_sala1 = pygame.image.load('insper_test2.jpg')
 imag2 = pygame.image.load('tijolo.jpeg')
 imag3 = pygame.image.load('out.jpg')
-imag4 = pygame.image.load('ipad.jpg')
+imag4 = pygame.image.load('chave.jpg')
 
 
 clock = pygame.time.Clock()
@@ -34,7 +34,7 @@ while estado >= 0:
             
             gameDisplay.fill(white)
             gameDisplay.blit(imag_sala1,(0,0))
-            gameDisplay.blit(imag4,(516,424))
+            gameDisplay.blit(imag4,(533,516))
             
     
 
@@ -62,23 +62,7 @@ while estado >= 0:
 
 
 
-###########################################################################################
 
-''''
-class Inventário:
-    
-    def __init__(self,objeto):
-        self.objeto = pygame.image.load(objeto)
-
-    def adiciona_inventario(self,objeto):
-        if e in Insper_toy:
-            e["imagem"] = self.objeto
-            
-    def mostra_objeto(self):
-        if self.objeto in inventário:
-            print("
-            '''''
-        
         
         
         
