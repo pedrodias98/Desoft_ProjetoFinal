@@ -82,6 +82,7 @@ def botao_inventario():
 estado = 0
 while estado >= 0:
     for event in pygame.event.get():
+        print(event)
         if event.type == pygame.QUIT:
             estado = -1
         elif event.type == pygame.MOUSEBUTTONDOWN:
@@ -98,8 +99,7 @@ while estado >= 0:
             if estado == 0:
                 if 534<= X <= 558 and 517 <= Y <= 532:
                     estado = 1
-                    
-                    
+                            
             elif estado == 1:
                 gameDisplay.fill(white)
                 gameDisplay.blit(saida,(0,0))
@@ -144,90 +144,92 @@ while estado >= 0:
                 elif 681 <= X <= 740 and 294 <= Y <= 329:
                     estado = 6 # lado (7.3)
                     
-                    
+           #Sala 12 views         
             elif estado == 6: # (7.3)
-                visão = 0
-                if visão == 0:
-                    gameDisplay.fill(white)
-                    gameDisplay.blit(sala_info1,(0,0))
-                    if 476 <= X <= 531 and 277 <= Y <= 328:
-                        estado = 5 # trás (5)
-                    elif 476 <= X <= 525 and 556 <= Y <= 597:
-                        visãoo = 1 # frente (7.1)
-                    elif 682 <= X <= 740 and 409 <= Y <= 455:
-                        visão = 2 # lado (7.2)
+               visão = 0
+               while visão >= 0: 
+                    if visão == 0:
+                        gameDisplay.fill(white)
+                        gameDisplay.blit(sala_info1,(0,0))
+                        if 476 <= X <= 531 and 557 <= Y <= 598:
+                            estado = 5 # trás (5)
+                        elif 481 <= 529 <= 330 and 292 <= Y <= 332:
+                            visão = 2 # frente (v2)
+                        elif 682 <= X <= 720 and 409 <= Y <= 457:
+                            visão = 1 # lado (v1)
 
-                elif visão == 1:
-                    gameDisplay.fill(white)
-                    gameDisplay.blit(sala_info2,(0,0))
-                    if 390 <= X <= 480 and 478 <= Y <= 531:
-                        visão == 0 # trás (5)
-                                     
-                elif visão == 2:
-                    gameDisplay.fill(white)
-                    gameDisplay.blit(sala_info3,(0,0))
-                    if 390 <= X <= 480 and 478 <= Y <= 531:
-                        estado = 5 # trás (5)
-                    elif 408 <= X <= 453 and 297 <= Y <= 330:
-                        visãoo = 1 # frente (7.1)
-                    elif 516 <= X <= 549 and 323 <= Y <= 379:
-                        visão = 2 # lado (7.2)
+                    elif visão == 1:
+                        gameDisplay.fill(white)
+                        gameDisplay.blit(sala_info2,(0,0))
+                        if 390 <= X <= 480 and 478 <= Y <= 531:
+                            visão == 0 # trás (v0)
+                                         
+                    elif visão == 2:
+                        gameDisplay.fill(white)
+                        gameDisplay.blit(sala_info3,(0,0))
+                        if 390 <= X <= 480 and 478 <= Y <= 531:
+                            estado = 5 # trás (v0)
+                        elif 408 <= X <= 453 and 297 <= Y <= 330:
+                            visão = 1 # frente (v4)
+                        elif 516 <= X <= 549 and 323 <= Y <= 379:
+                            visão = 2 # lado (v3)
 
-                                     
-                elif visão == 3:
-                    gameDisplay.fill(white)                   
-                    gameDisplay.blit(sala_info4,(0,0))
-                    if 390 <= X <= 480 and 478 <= Y <= 531:
-                        visão == 0 # trás (5)
-                                     
-                elif visão == 4:  
-                    gameDisplay.fill(white)
-                    gameDisplay.blit(sala_info5,(0,0))
-                    if 390 <= X <= 480 and 478 <= Y <= 531:
-                        estado = 5 # trás (5)
-                    elif 408 <= X <= 453 and 297 <= Y <= 330:
-                        visãoo = 1 # frente (7.1)
-                    elif 516 <= X <= 549 and 323 <= Y <= 379:
-                        visão = 2 # lado (7.2)
+                                         
+                    elif visão == 3:
+                        gameDisplay.fill(white)                   
+                        gameDisplay.blit(sala_info4,(0,0))
+                        if 390 <= X <= 480 and 478 <= Y <= 531:
+                            visão == 0 # trás (v2)
+                                         
+                    elif visão == 4:  
+                        gameDisplay.fill(white)
+                        gameDisplay.blit(sala_info5,(0,0))
+                        if 390 <= X <= 480 and 478 <= Y <= 531:
+                            estado = 5 # trás (v2)
+                        elif 408 <= X <= 453 and 297 <= Y <= 330:
+                            visãoo = 1 # frente (v6)
+                        elif 516 <= X <= 549 and 323 <= Y <= 379:
+                            visão = 2 # lado (v5)
 
-                                     
-                elif visão == 5:                  
-                    gameDisplay.fill(white)
-                    gameDisplay.blit(sala_info6,(0,0))
-                    if 390 <= X <= 480 and 478 <= Y <= 531:
-                        visão == 0 # trás (5)
+                                         
+                    elif visão == 5:                  
+                        gameDisplay.fill(white)
+                        gameDisplay.blit(sala_info6,(0,0))
+                        if 390 <= X <= 480 and 478 <= Y <= 531:
+                            visão == 0 # trás (v4)
 
-                elif visão == 6:                     
-                    gameDisplay.fill(white)
-                    gameDisplay.blit(sala_info7,(0,0))
-                    if 390 <= X <= 480 and 478 <= Y <= 531:
-                        estado = 2 # trás (5)
-                    elif 408 <= X <= 453 and 297 <= Y <= 330:
-                        estado = 4 # frente (7.1)
-                    elif 516 <= X <= 549 and 323 <= Y <= 379:
-                        estado = 5 # lado (7.2)
+                    elif visão == 6:                     
+                        gameDisplay.fill(white)
+                        gameDisplay.blit(sala_info7,(0,0))
+                        if 390 <= X <= 480 and 478 <= Y <= 531:
+                            estado = 2 # trás (v5)
+                        elif 408 <= X <= 453 and 297 <= Y <= 330:
+                            estado = 4 # frente (v9)
+                        elif 516 <= X <= 549 and 323 <= Y <= 379:
+                            estado = 5 # lado1 (v7)
+                        elif 516 <= X <= 549 and 323 <= Y <= 379:
+                            estado = 5 # lado1 (v8)
 
-                elif visão == 7:                    
-                    gameDisplay.fill(white)
-                    gameDisplay.blit(sala_info8,(0,0))
-                    if 390 <= X <= 480 and 478 <= Y <= 531:
-                        visão == 0 # trás (5)
+                    elif visão == 7:                    
+                        gameDisplay.fill(white)
+                        gameDisplay.blit(sala_info8,(0,0))
+                        if 390 <= X <= 480 and 478 <= Y <= 531:
+                            visão == 0 # trás (v6)
 
-                elif visão == 8:                    
-                    gameDisplay.fill(white)
-                    gameDisplay.blit(sala_info9,(0,0))
-                    if 390 <= X <= 480 and 478 <= Y <= 531:
-                        visão == 0 # trás (5)
+                    elif visão == 8:                    
+                        gameDisplay.fill(white)
+                        gameDisplay.blit(sala_info9,(0,0))
+                        if 390 <= X <= 480 and 478 <= Y <= 531:
+                            visão == 0 # trás (v6)
 
-                elif visão == 9:  
-                    gameDisplay.fill(white)
-                    gameDisplay.blit(sala_info10,(0,0))
-                    if 390 <= X <= 480 and 478 <= Y <= 531:
-                        estado = 5 # trás (5)
-                    elif 408 <= X <= 453 and 297 <= Y <= 330:
-                        visãoo = 1 # frente (7.1)
-                    elif 516 <= X <= 549 and 323 <= Y <= 379:
-                        visão = 2 # lado (7.2)
+                    elif visão == 9:  
+                        gameDisplay.fill(white)
+                        gameDisplay.blit(sala_info10,(0,0))
+                        if 390 <= X <= 480 and 478 <= Y <= 531:
+                            estado = 5 # trás (v0)
+                        elif 408 <= X <= 453 and 297 <= Y <= 330:
+                            visãoo = 1 # frente (v6)
+                    
 
                                      
 ##                ameDisplay.fill(white)
