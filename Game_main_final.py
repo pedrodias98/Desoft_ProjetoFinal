@@ -53,32 +53,6 @@ def botao_inventario():
                 a = False
             else:
                 continue
-        
-
-##
-##class inventário ():
-##    def __init__(self,imagem):
-##        self.inventario = []
-##        self.imagem = imagem
-##        
-##    def adicionar(self):
-##        if self.imagem not in inventario:
-##            self.inventario.append(imagem)
-##            
-##    def inventario_visual(self,imagem,a,b):
-##        if imagem in inventario:
-##            self.gameDisplay.blit(inventario,(0,0))
-##            self.gameDisplay.blit(imagem,(a,b))
-     
-        
-    
-        
-            
-        
-        
-    
-    
-
 estado = 0
 while estado >= 0:
     for event in pygame.event.get():
@@ -94,9 +68,8 @@ while estado >= 0:
             gameDisplay.blit(chave,(533,516))
             botao_inventario()
             
-    
-
-            if estado == 0:
+            #SALAS 4 andar
+            if estado == 0:       
                 if 534<= X <= 558 and 517 <= Y <= 532:
                     estado = 1
                             
